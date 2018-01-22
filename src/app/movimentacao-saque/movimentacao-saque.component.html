@@ -1,0 +1,36 @@
+<div class="container">
+
+  <h1>Sacar cedulas</h1>
+
+  <div class="form-group">
+    <label for="valorSaque">Valor</label>
+    <input type="text" class="form-control" name="valorSaque" id="valorSaque" (keypress)="eventHandler($event)" [(ngModel)]="valorSaqueInput" placeholder="Digite o valor">
+    <button type="button" (click)="mostrarOpcoesSaque()" class="btn btn-primary">Confirmar</button>
+    <a class="btn btn-secondary" (click)="goBack()"> Voltar </a>
+  </div>
+
+
+  <div *ngFor="let opcaoSaque of opcoesSaque; let i = index" >
+  <div class="row">
+        <div class="col-sm-6">
+          <div class="card" style="margin-bottom: 10px;">
+            <div class="card-body">
+              <h5 class="card-title">Opção saque {{i+1}}</h5>
+              <p class="card-text">{{opcaoSaque}}</p>
+              <a (click)="sacarCedulas(opcaoSaque)" class="btn btn-primary">Sacar</a>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+
+  <button class="btn btn-success" type="button" [hidden]="!melhorOpcaoSaque" (click)="sacarMelhorOpcao()">Melhor opçao</button>
+
+  <div class="form-group">
+    <h2>Cedulas no Banco</h2>
+    <li *ngFor="let cedula of cedulasServidor">
+      valor: {{ cedula.valor }} - quantidade: {{ cedula.quantidade }}
+    </li>
+  </div>
+
+</div>

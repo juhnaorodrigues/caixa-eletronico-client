@@ -1,0 +1,24 @@
+<form (submit)="authenticateUser()">
+<!--<form>-->
+
+  <div class="input">
+    <label>Username</label>
+    <input type="text" name="login" [(ngModel)]="loginForm.login">
+  </div>
+
+  <div class="input">
+    <label>Password</label>
+    <input type="password" name="senha" [(ngModel)]="loginForm.senha">
+  </div>
+
+  <div class="input">
+    <input type="submit" value="login">
+  </div>
+
+  <!--<div class="input">-->
+    <!--<button (click)="facebookLogin()" class="btn btn-block btn-social btn-facebook">-->
+      <!--<span class="fa fa-facebook"></span> Sign in with Facebook-->
+    <!--</button>-->
+  <!--</div>-->
+
+</form>

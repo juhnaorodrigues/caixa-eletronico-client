@@ -1,0 +1,28 @@
+<div class="container">
+
+  <h2>Depositar cedulas</h2>
+  <form>
+    <div class="form-group">
+      <label for="cedula10">Cedula 10R$</label>
+      <input type="text" class="form-control" name="cedula10" id="cedula10" (keypress)="eventHandler($event)" [(ngModel)]="quantidadeCedulas.quantidadeCedulas10" placeholder="Digite a quantidade">
+    </div>
+
+    <div class="form-group">
+      <label for="cedula20">Cedula 20R$</label>
+      <input type="text" name="cedula20" id="cedula20" class="form-control" (keypress)="eventHandler($event)" [(ngModel)]="quantidadeCedulas.quantidadeCedulas20" placeholder="Digite a quantidade">
+    </div>
+
+    <div class="form-group">
+      <label for="cedula50">Cedula 50R$</label>
+      <input type="text" class="form-control" name="cedula50" id="cedula50" (keypress)="eventHandler($event)" [(ngModel)]="quantidadeCedulas.quantidadeCedulas50" placeholder="Digite a quantidade">
+    </div>
+
+    <div class="form-group">
+      <label for="cedula100">Cedula 100R$</label>
+      <input type="text" class="form-control" name="cedula100" id="cedula100" (keypress)="eventHandler($event)" [(ngModel)]="quantidadeCedulas.quantidadeCedulas100" placeholder="Digite a quantidade">
+    </div>
+
+    <button type="button" class="btn btn-primary" (click)="depositarCedulas()">Confirmar</button>
+    <a class="btn btn-secondary" (click)="goBack()"> Voltar </a>
+  </form>
+</div>
